@@ -4,30 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Treinamento</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>OptimusTech | Projeto de estudo</title>
   </head>
   <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <header>
-      <navbar>
+      <nav aria-label="Navegação principal">
         <div class="logo">
           <img src="./assets/worldwide.png" alt="Logo World Wide" />
           <p>OptimusTech</p>
         </div>
         <div class="navegacao">
-          <a href="#">Home</a>
-          <a href="#">Produtos</a>
-          <a href="#">Recursos</a>
-          <a href="#">Sobre nós</a>
+          <a href="#conteudo">Início</a>
+          <a href="#metricas">Resultados</a>
+          <a href="#vagas">Vagas</a>
+          <a href="#sobre">Sobre nós</a>
         </div>
         <div class="acesso">
-          <button class="acesso_botao1">Entrar</button>
-          <button class="acesso_botao2">Cadastrar</button>
+          <button class="acesso_botao1" type="button" disabled title="Demonstração sem autenticação">Entrar</button>
+          <button class="acesso_botao2" type="button" disabled title="Demonstração sem cadastro">Cadastrar</button>
         </div>
-      </navbar>
+      </nav>
     </header>
-    <main>
-      <section>
+    <main id="conteudo" tabindex="-1">
+      <section id="sobre">
         <div class="apresentacao">
           <p>Sobre nós</p>
           <h1>Por que somos diferentes?</h1>
@@ -38,7 +39,7 @@
           </span>
         </div>
       </section>
-      <section class="metricas">
+      <section id="metricas" class="metricas" aria-label="Resultados ilustrativos">
         <div class="cards">
           <h1>400+</h1>
           <h3>Projetos concluídos</h3>
@@ -79,7 +80,7 @@
         </div>
         <img src="assets/Image.png" alt="" />
       </section>
-      <section class="vagas_detalhes">
+      <section id="vagas" class="vagas_detalhes">
         <h2>Design</h2>
         <div class="vaga">
           <span class="titulo-vaga">Product Designer</span>
@@ -132,10 +133,12 @@
       <div>
         <h1>Acompanhe as nossas oportunidades</h1>
         <p>Seja o primeiro a saber quando novas vagas serão abertas!</p>
-        <form>
-          <input type="Email" name="Email" placeholder="Seu e-mail">
-          <button class="acesso_botao2">Cadastrar</button>
+        <form aria-describedby="demo-note">
+          <label for="email">E-mail (demonstração)</label>
+          <input id="email" type="email" placeholder="Seu e-mail" disabled>
+          <button class="acesso_botao2" type="button" disabled title="Demonstração sem cadastro">Cadastrar</button>
         </form>
+        <p id="demo-note">Projeto de estudo: vagas e números ilustrativos. Cadastro e envio de e-mail indisponíveis.</p>
         <span>© 2022 OptimusTech. Todos os direitos reservados.</span>
       </div>
     </footer>
