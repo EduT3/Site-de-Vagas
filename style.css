@@ -14,19 +14,19 @@
   box-sizing: border-box;
 }
 
-/* css do navbar */
+/* css do nav */
 
 header {
   width: 100vw;
   height: 80px;
 }
-navbar {
+nav {
   display: flex;
   align-items: center;
   margin-top: 18px;
   margin-left: 80px;
 }
-navbar,
+nav,
 div {
   display: flex;
   align-items: center;
@@ -215,7 +215,7 @@ button {
 .titulo-vaga {
 font-family: var(--fonte-principal);
 font-weight: 500;
-font-size: 1.2;
+font-size: 1.2rem;
 }
 
 .informacoes {
@@ -323,4 +323,47 @@ footer div span {
   font-weight: 400;
   font-size: .9rem;
   color: #98A2B3;
+}
+
+/* Keyboard navigation and responsive media. */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #d59cff;
+  outline-offset: 4px;
+}
+img { max-width: 100%; height: auto; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 20; padding: .75rem 1rem; background: #fff; color: #111; }
+.skip-link:focus { top: 1rem; }
+
+body { font-family: var(--fonte-principal); line-height: 1.5; }
+header { width: 100%; height: auto; padding: 1.25rem; }
+header nav { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
+.logo, .navegacao, .acesso { margin: 0; width: auto; }
+.navegacao { flex-wrap: wrap; gap: 1.25rem; }
+button, input { min-height: 44px; font: inherit; }
+button:disabled { opacity: .65; cursor: not-allowed; }
+.apresentacao { width: 100%; height: auto; padding: 4rem 1.25rem; gap: 1.5rem; text-align: center; }
+.apresentacao h1 { font-size: clamp(2rem, 5vw, 3rem); }
+.apresentacao span { width: min(100%, 780px); }
+.metricas { max-width: 1280px; margin: auto; padding: 1.25rem; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.cards { padding: 1.5rem; }
+.anuncio { padding: 4rem 1.25rem 0; text-align: center; }
+.vagas_detalhes { max-width: 800px; padding: 2rem 1.25rem; margin: auto; }
+.vagas_detalhes h2 { padding: 1.5rem 0; }
+.vaga { width: 100%; margin: 0 0 1.5rem; padding: 1.5rem; }
+.informacoes { flex-wrap: wrap; gap: .75rem 1.5rem; }
+.container_comentarios { height: auto; padding: 2rem 1.25rem; }
+.comentarios { width: min(100%, 1100px); }
+.comentarios_comentario { width: 100%; font-size: clamp(1.4rem, 3vw, 2.1rem); }
+footer { width: 100%; height: auto; }
+footer > div { padding: 3rem 1.25rem; text-align: center; }
+footer form { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .75rem; max-width: 100%; }
+footer form label { flex-basis: 100%; }
+footer div form input { width: min(100%, 360px); min-width: 0; }
+#demo-note { max-width: 680px; font-size: 1rem; }
+@media (max-width: 600px) {
+  header nav { justify-content: center; }
+  .navegacao { justify-content: center; }
+  .apresentacao span { font-size: 1.125rem; }
+  .vagas__anuncio { gap: 2rem; padding-bottom: 2rem; }
+  .vagas__anuncio img { width: calc(100% - 2.5rem); }
 }
